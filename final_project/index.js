@@ -28,15 +28,6 @@ app.use("/customer/auth/*", function auth(req,res,next){
         next();
     })
 });
-
-app.use("/customer/login", function(req,res,next){
-    // Check if the user is already logged in
-    if(req.session.user){
-        return res.status(200).send("User already logged in")
-    }
-    next();
-
-});
  
 const PORT =5000;
 
